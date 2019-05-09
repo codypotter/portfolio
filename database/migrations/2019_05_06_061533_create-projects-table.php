@@ -19,12 +19,12 @@ class CreateProjectsTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('role');
-            $table->string('productLink');
-            $table->string('codeLink');
-            $table->boolean('isComplete');
+            $table->string('productPage');
+            $table->string('codePage');
+            $table->boolean('isComplete')->default(0);
             $table->date('releaseDate');
             $table->unsignedInteger('cost');
-            $table->boolean('isOpenSource');
+            $table->boolean('isOpenSource')->default(0);
         });
     }
 

@@ -18,7 +18,7 @@ class CreateSkillsTable extends Migration
             $table->timestamps();
 
             $table->integer('proficiency');
-            $table->boolean('isTechnology');
+            $table->boolean('isTechnology')->default(0);
             $table->string('name');
         });
     }

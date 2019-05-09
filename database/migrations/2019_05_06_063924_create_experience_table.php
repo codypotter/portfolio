@@ -19,7 +19,7 @@ class CreateExperienceTable extends Migration
 
             $table->date('startDate');
             $table->boolean('isCurrent');
-            $table->date('endDate');
+            $table->date('endDate')->nullable();
             $table->string('company');
             $table->string('title');
             $table->text('responsibilities');
