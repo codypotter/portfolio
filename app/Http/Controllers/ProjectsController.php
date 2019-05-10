@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Project;
+use App\Tag;
+use Exception;
 use Illuminate\Http\Request;
 
 class ProjectsController extends Controller {
@@ -71,11 +73,22 @@ class ProjectsController extends Controller {
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Project  $project
+     * @param \App\Project $project
      * @return \Illuminate\Http\Response
      */
     public function destroy(Project $project) {
-        $project->delete();
-        return redirect('/projects');
+        try {
+//            delete all associated tags first
+            foreach (Tag::all() as $tag) {
+                if ($tag->projectId == $project->getAttribute('id')) {
+                    $tag->delete();
+                }
+            }
+            $project->delete();
+        } catch (Exception $e) {
+            abort(500);
+        } finally {
+            return redirect('/projects');
+        }
     }
 }

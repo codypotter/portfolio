@@ -36,4 +36,9 @@
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <form action="/experience/{{$experience->id}}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-outline-danger">Delete</button>
+    </form>
 @endsection

@@ -1,10 +1,11 @@
 @extends('layout')
 
 @section('title')
-    | Projects
+    | Education
 @endsection
+
 @section('content')
     <div class="container">
-        @include('partials.projects', compact('projects'))
+        @include('partials.educations', compact('educations'))
     </div>
 @endsection

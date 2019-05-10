@@ -5,9 +5,7 @@
 @endsection
 
 @section('content')
-    <ul>
-        @foreach($experiences as $experience)
-            <li>{{$experience->title}}</li>
-        @endforEach
-    </ul>
+    <div class="container">
+        @include('partials.experiences', compact('experiences'))
+    </div>
 @endsection

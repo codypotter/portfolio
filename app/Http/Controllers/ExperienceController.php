@@ -83,6 +83,7 @@ class ExperienceController extends Controller
      */
     public function destroy(Experience $experience)
     {
-        //
+        $experience->delete();
+        return redirect('/experience');
     }
 }

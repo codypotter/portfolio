@@ -5,11 +5,7 @@
 @endsection
 
 @section('content')
-    <ul>
-        @foreach ($skills as $skill)
-            <li>
-                {{$skill->name}}
-            </li>
-        @endforeach
-    </ul>
+    <div class="container">
+        @include('partials.skills', compact('skills'))
+    </div>
 @endsection

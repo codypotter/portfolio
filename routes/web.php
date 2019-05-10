@@ -11,8 +11,10 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function() {
-    return view('home');
+    return view('index');
 });
 
 Route::get('/about', function() {
@@ -23,6 +25,10 @@ Route::get('/contact', function() {
     return view('contact');
 });
 
+Route::get('/login', function() {
+    return view('login');
+});
+
 Route::resource('projects', 'ProjectsController');
 
 Route::resource('skills', 'SkillsController');
@@ -30,3 +36,9 @@ Route::resource('skills', 'SkillsController');
 Route::resource('experience', 'ExperienceController');
 
 Route::resource('education', 'EducationController');
+
+Route::resource('tags', 'TagsController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

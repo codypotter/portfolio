@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Skill;
+use App\Tag;
+use Exception;
 use Illuminate\Http\Request;
 
 class SkillsController extends Controller
@@ -83,6 +85,18 @@ class SkillsController extends Controller
      */
     public function destroy(Skill $skill)
     {
-        //
+        try{
+//            delete all associated tags first
+            foreach (Tag::all() as $tag) {
+                if ($tag->skillId == $skill->getAttribute('id')) {
+                    $tag->delete();
+                }
+            }
+            $skill->delete();
+        } catch (Exception $e) {
+            abort(500);
+        } finally {
+            return redirect('/skills');
+        }
     }
 }

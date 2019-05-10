@@ -14,7 +14,8 @@ class EducationController extends Controller
      */
     public function index()
     {
-        //
+        $educations = Education::all();
+        return view('education.index', compact('educations'));
     }
 
     /**
@@ -24,7 +25,7 @@ class EducationController extends Controller
      */
     public function create()
     {
-        //
+        return view('education.create');
     }
 
     /**
@@ -35,7 +36,8 @@ class EducationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Education::create(request(['gradDate', 'institution', 'achievement', 'gpa', 'major']));
+        return redirect('/education');
     }
 
     /**
@@ -46,7 +48,7 @@ class EducationController extends Controller
      */
     public function show(Education $education)
     {
-        //
+        abort(404);
     }
 
     /**
@@ -57,7 +59,7 @@ class EducationController extends Controller
      */
     public function edit(Education $education)
     {
-        //
+        return view('education.edit', compact('education'));
     }
 
     /**
@@ -69,7 +71,8 @@ class EducationController extends Controller
      */
     public function update(Request $request, Education $education)
     {
-        //
+        $education->update(request(['gradDate', 'institution', 'achievement', 'gpa', 'major']));
+        return redirect('/education');
     }
 
     /**
@@ -80,6 +83,7 @@ class EducationController extends Controller
      */
     public function destroy(Education $education)
     {
-        //
+        $education->delete();
+        return redirect('/education');
     }
 }

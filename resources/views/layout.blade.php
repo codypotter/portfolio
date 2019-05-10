@@ -26,12 +26,19 @@
                 <li class="nav-item">
                     <a href="/contact" class="nav-link">Contact</a>
                 </li>
+                @auth()
+                    <li class="nav-item">
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <input class="btn nav-link" type="submit" value="logout">
+                        </form>
+                    </li>
+
+                @endauth
             </ul>
         </div>
     </nav>
 </header>
-    <div class="container">
-        @yield('content')
-    </div>
+@yield('content')
 </body>
 </html>
