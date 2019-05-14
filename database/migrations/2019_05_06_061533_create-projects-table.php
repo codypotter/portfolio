@@ -25,6 +25,7 @@ class CreateProjectsTable extends Migration
             $table->date('releaseDate');
             $table->unsignedInteger('cost');
             $table->boolean('isOpenSource')->default(0);
+            $table->string('imgPath');
         });
     }
 

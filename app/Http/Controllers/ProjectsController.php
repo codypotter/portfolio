@@ -8,6 +8,11 @@ use Exception;
 use Illuminate\Http\Request;
 
 class ProjectsController extends Controller {
+
+    public function __construct() {
+        $this->middleware('auth')->except(['show']);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -34,8 +39,8 @@ class ProjectsController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store() {
-        Project::create(request(['title', 'description', 'role', 'productPage', 'codePage', 'isComplete', 'isOpenSource', 'releaseDate', 'cost']));
-        return redirect('/projects');
+        Project::create(request(['title', 'description', 'role', 'productPage', 'codePage', 'isComplete', 'isOpenSource', 'releaseDate', 'cost', 'imgPath']));
+        return redirect('/home');
     }
 
     /**
@@ -66,8 +71,8 @@ class ProjectsController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Project $project) {
-        $project->update(request(['title', 'description', 'role', 'productPage', 'codePage', 'isComplete', 'isOpenSource', 'releaseDate', 'cost']));
-        return redirect('/projects');
+        $project->update(request(['title', 'description', 'role', 'productPage', 'codePage', 'isComplete', 'isOpenSource', 'releaseDate', 'cost', 'imgPath']));
+        return redirect('/home');
     }
 
     /**
@@ -88,7 +93,7 @@ class ProjectsController extends Controller {
         } catch (Exception $e) {
             abort(500);
         } finally {
-            return redirect('/projects');
+            return redirect('/home');
         }
     }
 }

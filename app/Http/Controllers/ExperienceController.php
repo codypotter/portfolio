@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class ExperienceController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth')->except(['show']);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -36,8 +40,8 @@ class ExperienceController extends Controller
      */
     public function store(Request $request)
     {
-        Experience::create(request(['title', 'responsibilities', 'company', 'isCurrent', 'startDate', 'endDate']));
-        return redirect('/experience');
+        Experience::create(request(['title', 'responsibilities', 'company', 'isCurrent', 'startDate', 'endDate', 'cityState']));
+        return redirect('/home');
     }
 
     /**
@@ -71,8 +75,8 @@ class ExperienceController extends Controller
      */
     public function update(Request $request, Experience $experience)
     {
-        $experience->update(request(['title', 'responsibilities', 'company', 'isCurrent', 'startDate', 'endDate']));
-        return redirect('/experience');
+        $experience->update(request(['title', 'responsibilities', 'company', 'isCurrent', 'startDate', 'endDate', 'cityState']));
+        return redirect('/home');
     }
 
     /**
@@ -84,6 +88,6 @@ class ExperienceController extends Controller
     public function destroy(Experience $experience)
     {
         $experience->delete();
-        return redirect('/experience');
+        return redirect('/home');
     }
 }

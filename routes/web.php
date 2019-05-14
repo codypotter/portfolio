@@ -11,14 +11,29 @@
 |
 */
 
+use App\Cody;
+use App\Education;
+use App\Experience;
+use App\Project;
+use App\Skill;
+use App\Tag;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function() {
-    return view('index');
+    $cody = Cody::first();
+    $projects = Project::all()->sortBy('releaseDate');
+    $tags = Tag::all();
+    $skills = Skill::all();
+    return view('index', compact(['cody', 'projects', 'tags', 'skills']));
 });
 
 Route::get('/about', function() {
-    return view('about');
+    $cody = Cody::first();
+    $educations = DB::table('education')->orderBy('gradDate', 'desc')->get();
+    $experiences = Experience::all();
+    $skills = DB::table('skills')->orderBy('proficiency', 'desc')->get();
+    return view('about', compact(['educations', 'experiences', 'skills', 'cody']));
 });
 
 Route::get('/contact', function() {

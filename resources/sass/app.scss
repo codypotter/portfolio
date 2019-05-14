@@ -1,5 +1,5 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 // Variables
 @import 'variables';
@@ -7,7 +7,47 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+$footerHeight: 2.5rem;
+
+#motto-container {
+    display:flex;
+    justify-content: center;
+    height: 250px;
+    flex-direction: column;
+}
+
 .navbar-laravel {
-    background-color: #fff;
+    background-color: #B96B66;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-hover {
+    transition: box-shadow .25s;
+    transition-timing-function: ease-in-out;
+}
+
+.shadow-hover:hover {
+    @extend .shadow;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: $footerHeight;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $footerHeight;
+}
+
+@media only screen and (min-width: 600px) {
+    section {
+        margin-top: 100px;
+    }
 }

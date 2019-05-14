@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class EducationController extends Controller
 {
+
+    public function __construct() {
+        $this->middleware('auth')->except(['show']);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -36,8 +41,8 @@ class EducationController extends Controller
      */
     public function store(Request $request)
     {
-        Education::create(request(['gradDate', 'institution', 'achievement', 'gpa', 'major']));
-        return redirect('/education');
+        Education::create(request(['gradDate', 'institution', 'achievement', 'gpa', 'major', 'cityState']));
+        return redirect('/home');
     }
 
     /**
@@ -71,8 +76,8 @@ class EducationController extends Controller
      */
     public function update(Request $request, Education $education)
     {
-        $education->update(request(['gradDate', 'institution', 'achievement', 'gpa', 'major']));
-        return redirect('/education');
+        $education->update(request(['gradDate', 'institution', 'achievement', 'gpa', 'major', 'cityState']));
+        return redirect('/home');
     }
 
     /**
@@ -84,6 +89,6 @@ class EducationController extends Controller
     public function destroy(Education $education)
     {
         $education->delete();
-        return redirect('/education');
+        return redirect('/home');
     }
 }

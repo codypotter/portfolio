@@ -10,4 +10,18 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
     protected $guarded = [];
+
+    public function tags() {
+        return $this->hasMany('App\Tag', 'projectId');
+    }
+
+    public function getSkills() {
+        $associatedSkills = new \Illuminate\Database\Eloquent\Collection;
+        foreach ($this->tags as $associatedTag) {
+            $associatedSkills->push($associatedTag->skill);
+        }
+        return $associatedSkills;
+    }
 }
+
+

@@ -1,8 +1,10 @@
 // Body
-$body-bg: #f8fafc;
+$body-bg: #fafafa;
+$body-color: #333;
+$jumbotron-bg: #e7e7e7;
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-sans-serif: 'Montserrat', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
@@ -17,3 +19,5 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+$enable-responsive-font-sizes: true;

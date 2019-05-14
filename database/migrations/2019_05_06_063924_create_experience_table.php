@@ -23,6 +23,7 @@ class CreateExperienceTable extends Migration
             $table->string('company');
             $table->string('title');
             $table->text('responsibilities');
+            $table->text('cityState');
         });
     }
 

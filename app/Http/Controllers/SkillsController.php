@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class SkillsController extends Controller
 {
+
+    public function __construct() {
+        $this->middleware('auth')->except(['show']);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -38,8 +43,8 @@ class SkillsController extends Controller
      */
     public function store(Request $request)
     {
-        Skill::create(request(['name', 'isTechnology', 'proficiency']));
-        return redirect('/skills');
+        Skill::create(request(['name', 'isTechnology', 'proficiency', 'iconPath']));
+        return redirect('/home');
     }
 
     /**
@@ -73,8 +78,8 @@ class SkillsController extends Controller
      */
     public function update(Request $request, Skill $skill)
     {
-        $skill->update(request(['name', 'isTechnology', 'proficiency']));
-        return redirect('/skills');
+        $skill->update(request(['name', 'isTechnology', 'proficiency', 'iconPath']));
+        return redirect('/home');
     }
 
     /**
@@ -96,7 +101,7 @@ class SkillsController extends Controller
         } catch (Exception $e) {
             abort(500);
         } finally {
-            return redirect('/skills');
+            return redirect('/home');
         }
     }
 }

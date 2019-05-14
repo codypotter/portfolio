@@ -20,6 +20,7 @@ class CreateEducationTable extends Migration
             $table->string('institution');
             $table->string('achievement');
             $table->integer('gpa');
+            $table->text('cityState');
             $table->string('major');
         });
     }

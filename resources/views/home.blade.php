@@ -7,6 +7,9 @@
         @include('partials.skills', compact('skills'))
         @include('partials.projects', compact('projects'))
     </div>
+    <div class="container">
+        @include('partials.tags', compact(['tags', 'projects', 'skills']))
+    </div>
 @stop
 
 

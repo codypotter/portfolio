@@ -20,6 +20,7 @@ class CreateSkillsTable extends Migration
             $table->integer('proficiency');
             $table->boolean('isTechnology')->default(0);
             $table->string('name');
+            $table->string('iconPath');
         });
     }
 
