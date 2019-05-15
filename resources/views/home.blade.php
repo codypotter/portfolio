@@ -10,6 +10,7 @@
     <div class="container">
         @include('partials.tags', compact(['tags', 'projects', 'skills']))
     </div>
+
 @stop
 
 

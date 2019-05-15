@@ -16,10 +16,10 @@
                 <img src="{{asset('img/cody.svg')}}" alt="Cody" class="d-inline img-fluid" height="150px" width="150px">
             </div>
             <div style="padding-left:10px;">
-                <p class="lead">{{$cody ? $cody->introduction : 'Here is where the introduction goes.'}}</p>
+                <p class="lead">{{$cody ? $cody->introduction : 'Hi, I\'m Cody. I\'m a 3rd year Computer Science student attending Portland State University. I mostly make web and mobile apps in my free time. I\'m currently a manager at Whole Foods Market, but I\'m actively looking for internships and job opportunities.'}}</p>
             </div>
         </div>
-        <h4 class="mt-5">Education</h4>
+        <h3 class="mt-5">Education</h3>
         <hr>
             <ul>
             @foreach($educations as $education)
