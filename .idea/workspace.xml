@@ -425,7 +425,7 @@
       <workItem from="1557703244229" duration="18164000" />
       <workItem from="1557767942757" duration="9140000" />
       <workItem from="1557857660790" duration="2620000" />
-      <workItem from="1557903567261" duration="1511000" />
+      <workItem from="1557903567261" duration="1643000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1557125607499</created>
@@ -445,7 +445,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117891000" />
+    <option name="totallyTimeSpent" value="118023000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -459,7 +459,7 @@
   <component name="ToolWindowManager">
     <frame x="1273" y="0" width="1294" height="1417" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18395463" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18395463" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -474,7 +474,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32943925" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24766356" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24766356" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
