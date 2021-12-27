@@ -16,7 +16,7 @@
                 <img src="{{asset('img/cody.svg')}}" alt="Cody" class="d-inline img-fluid" height="150px" width="150px">
             </div>
             <div style="padding-left:10px;">
-                <p class="lead">{{$cody ? $cody->introduction : 'Hi, I\'m Cody. I\'m a full stack engineer with a passion for developing accessible software that enriches and improves lives.}}</p>
+                <p class="lead">{{$cody ? $cody->introduction : 'Hi, I\'m Cody. I\'m a full stack engineer with a passion for developing accessible software that enriches and improves lives.'}}</p>
             </div>
         </div>
         <h3 class="mt-5">Education</h3>

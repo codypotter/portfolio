@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e575e56-3134-41bf-a6fe-0056f37f9977" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/img/code-coverage.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,6 +335,7 @@
       <recent name="C:\Users\enjoi\Documents\projects\portfolio\resources\views\auth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\enjoi\Documents\projects\portfolio\public\img" />
       <recent name="C:\Users\enjoi\Documents\projects\portfolio\database\migrations" />
     </key>
   </component>
@@ -373,7 +371,7 @@
       <workItem from="1557767942757" duration="9140000" />
       <workItem from="1557857660790" duration="2620000" />
       <workItem from="1557903567261" duration="1643000" />
-      <workItem from="1640632768338" duration="369000" />
+      <workItem from="1640632768338" duration="1761000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1557125607499</created>
