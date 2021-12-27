@@ -16,7 +16,7 @@
                 <img src="{{asset('img/cody.svg')}}" alt="Cody" class="d-inline img-fluid" height="150px" width="150px">
             </div>
             <div style="padding-left:10px;">
-                <p class="lead">{{$cody ? $cody->introduction : 'Hi, I\'m Cody. I\'m a Computer Science student attending Portland State University. I mostly make web and mobile apps in my free time. I\'m currently a manager at Whole Foods Market, but I\'m actively looking for internships and job opportunities.'}}</p>
+                <p class="lead">{{$cody ? $cody->introduction : 'Hi, I\'m Cody. I\'m a full stack engineer with a passion for developing accessible software that enriches and improves lives.}}</p>
             </div>
         </div>
         <h3 class="mt-5">Education</h3>
