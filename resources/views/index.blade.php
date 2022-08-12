@@ -8,7 +8,7 @@
             </div>
             <div style="padding-left:10px;">
                 <h1 class="display-4">Hello, my name is Cody.</h1>
-                <p class="lead">{{$cody ? $cody->motto : 'I\'m a full stack developer and iOS automation engineer.'}}</p>
+                <p class="lead">{{$cody ? $cody->motto : 'I\'m a full stack engineer at Gearbox'}}</p>
             </div>
         </section>
         <section class="row">
